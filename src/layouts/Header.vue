@@ -16,8 +16,14 @@
                     <li class="nav-item">
                         <router-link class="nav-link" to="/detail">제품상세페이지</router-link>
                     </li>
-
+                    <li class="nav-item">
+                        <router-link class="nav-link" to="/sales">제품등록페이지</router-link>
+                    </li>
                 </ul>
+                <form class="form-control">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn=outline-success" type="submit">Search</button>
+                </form>
             </div>
         </div>
     </nav>
