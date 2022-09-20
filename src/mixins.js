@@ -65,6 +65,29 @@ export default {
                 prefix = "-";
                 v = v.substring(1);
             }
+
+            if(maxFractionDigit > 0 && format.substring(format.length - 1, format.length) == '0'){
+                v = String(parseFloat(v).toFixed(maxFractionDigit));
+
+            }
+
+            if(maxFractionDigit > 0 && v.indexOf(".") > -1) {
+                d = v.substring(v.indexOf("."));
+                d = d.replace(".", decimalSeparator);
+                v = v.substring(0, v.indexOf("."));
+
+            }
+
+            let regExp = /\D/g;
+            v = v.replace(regExp, "");
+            let r = /(\d+)(\d{3})/;
+            while(r.test(v)){
+                v = v.replace(r, "$1" + groupingSeparator + "$2");
+
+            }
+
+            return prefix + currency + String(v) + String(d);
         }
+
     }
 }
