@@ -52,11 +52,11 @@ export default {
     },
     methods: {
         async getProductList(){
-            this.productList = await this.$api("/api/productList", {});
+            this.productList = await this.$api("https://7a58c59e-b84f-4e10-a58f-95f61ae71074.mock.pstmn.io/api/productList", {});
             console.log(this.productList);
         },
         goToDetail(product_id){
-            this.$router.push({path: "/detail", query: {product_id : product_id}});
+            this.$router.push({path: "https://7a58c59e-b84f-4e10-a58f-95f61ae71074.mock.pstmn.io/api/detail", query: {product_id : product_id}});
         }
     }
 }

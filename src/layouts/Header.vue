@@ -11,7 +11,7 @@
                         <router-link class="nav-link" to="/">홈</router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link active" to="/">제품리스트</router-link>
+                        <router-link class="nav-link active" to="/productList">제품리스트</router-link>
                     </li>
                     <li class="nav-item">
                         <router-link class="nav-link" to="/detail">제품상세페이지</router-link>

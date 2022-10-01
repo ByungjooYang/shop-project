@@ -110,7 +110,7 @@ export default {
             return this.$currencyFormat(value);
         },
         async getProductDetail(){
-            let productDetail = await this.$api("/api/productDetail", {param: [this.productId]});
+            let productDetail = await this.$api("https://7a58c59e-b84f-4e10-a58f-95f61ae71074.mock.pstmn.io/api/productDetail", {param: [this.productId]});
             if(productDetail.length > 0){
                 this.productDetail = productDetail[0];
                 this.totalPrice = this.totalPrice = this.productDetail.product_price * this.total;

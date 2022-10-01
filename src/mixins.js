@@ -4,7 +4,7 @@ export default {
     methods: {
         async $api(url, data) {
             return (await axios({
-                method: 'post',
+                method: 'get',
                 url,
                 data
             }).catch(e => {
